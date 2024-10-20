@@ -10,12 +10,12 @@ customtkinter.set_default_color_theme("blue")
 app = customtkinter.CTk()
 app.title("Form")
 
-# Define el tamaño de la ventana
+# Define the window size
 width = 480
 height = 600
 app.geometry(f"{width}x{height}")
 
-# Calcula la posición para centrar la ventana
+# Calculate the position to center the window.
 screen_width = app.winfo_screenwidth()
 screen_height = app.winfo_screenheight()
 x = (screen_width // 2) - (width // 2)
@@ -27,7 +27,7 @@ app.minsize(480, 600)
 
 app.iconbitmap("./images/logo.ico")
 
-# funciones
+# Functions
 showing_password = False
 
 def show_password():
@@ -44,7 +44,7 @@ def show_password():
         show_p.configure(text="Show password")
 
 
-# up side
+# Part of the top
 frame = customtkinter.CTkFrame(app, fg_color="transparent")
 frame.pack(fill="both", expand="true", padx=20, pady=10)
 
@@ -75,7 +75,7 @@ password.pack(side="top", fill="x", pady="10")
 show_p = customtkinter.CTkButton(inputs,text="Show password", image=eye, fg_color="transparent", compound="left", hover="false", command=show_password)
 show_p.pack(side="top", anchor="w")
 
-# button to send data
+# Login button
 login = customtkinter.CTkButton(inputs, text="Login", font=("Arial", 25, "bold"))
 login.pack(side="top", fill="x",pady="30", padx="30")
 
